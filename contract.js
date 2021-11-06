@@ -20,6 +20,7 @@ const subscribeToContract = (network, name) => {
 
     // ETHRS version
     // this ABI object works for both Uniswap and SushiSwap
+    
     const abi = [
         "event Swap(address indexed sender, uint amount0In, uint amount1In, uint amount0Out, uint amount1Out, address indexed to)",
         ];

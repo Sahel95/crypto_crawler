@@ -2,6 +2,7 @@ const { ethers } = require("ethers");
 const subscribeToContract = require("./contract")
 const tokens = require('./tokens')
 const contractDetail = require('./contracts/contract-detail')
+const write = require('./influx/influx-writer')
 
 
 function getAmountsFromSwapArgs(swapArgs) {
@@ -54,6 +55,7 @@ const initEther = async (network, contractName) => {
             token1Decimals: tokens[token1]['decimals']
         });
         console.log({ price, volume });
+        write(price, volume)
         // influx
     });
 }
