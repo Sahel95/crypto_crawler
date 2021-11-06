@@ -27,7 +27,7 @@ const influxWriter = async (price, volume) => {
     return
 }
 
-influxWriter(153, 184)
+// influxWriter(153, 184)
 
 module.exports = influxWriter
 
