@@ -17,17 +17,17 @@ const influxWriter = async (price, volume, network, contractName) => {
     // .tag('price', price)
     .floatField('volume', volume)
     .timestamp(new Date())
-    console.log(point);
+    // console.log(point);
     writeApi.writePoint(point)
     
     await writeApi
         .close()
         .then( () => {
-            console.log('FINISHED');
+            console.log('Influx FINISHED');
         })
         .catch( e => {
             console.error(e);
-            console.log('Finished ERROR');
+            console.log('Influx Finished ERROR');
         })
     return
 }
