@@ -1,4 +1,6 @@
 j.py
+test.js
+influx/writetest.js
 temp.js
 node_modules/
 influx/influx-temp.js
