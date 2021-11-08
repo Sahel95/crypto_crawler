@@ -50,7 +50,7 @@ const eventListener = async (network, contractName) => {
     const filter = contract.filters.Swap();
 
     contract.on(filter, (from, a0in, a0out, a1in, a1out, to, event) => {
-        console.log(`Swap on ${network} - ${contractName}:::::::::::`);
+        console.log(`Swap on ${network} - ${contractName}::::::::::`);
         const { price, volume } = convertSwapEventToPrice({
             swapArgs: event.args,
             token0Decimals: tokens[token0]['decimals'],
@@ -61,7 +61,8 @@ const eventListener = async (network, contractName) => {
     });
 }
 
-// initEther('mainnet', 'SushiswapEthSpell')
-// initEther('arbitrum', 'SushiswapEthSpell')
+// eventListener('mainnet', 'SushiswapEthSpell')
+// eventListener('arbitrum', 'SushiswapEthSpell')
+// eventListener('arbitrum', 'uniswapWethCrv')
 
 module.exports = eventListener

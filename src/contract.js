@@ -34,7 +34,7 @@ const subscribeToContract = (network, name) => {
     return contract
 }
 
-// subscribeToContract('mainnet', 'SushiswapEthSpell')
+// subscribeToContract('arbitrum', 'uniswapWethCrv')
 
 module.exports = subscribeToContract
 

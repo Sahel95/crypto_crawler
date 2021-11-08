@@ -14,7 +14,7 @@ setQueues([
 
 queue.process(emailProcess);
 
-const sendNewEmail = (data: any) => {
+const sendNewEmail = (data) => {
     queue.add(data, {
         attempts: 5
     });
