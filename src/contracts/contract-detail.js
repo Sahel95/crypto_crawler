@@ -2,7 +2,7 @@ const {readFileSync} = require('fs')
 
 const contractDetail = {
     mainnet: {
-        SushiswapEthSpell: {
+        SushiswapWethSpell: {
             address: '0xb5De0C3753b6E1B4dBA616Db82767F17513E6d4E',
             token0: 'weth',
             token1:'spell',
@@ -32,24 +32,42 @@ const contractDetail = {
             token1: 'crv',
             // abi: JSON.parse(readFileSync(`./contracts/.json`))
         },
-        uniswapWethCrv: {
+        UniswapWethCrv: {
             address: '0x3da1313ae46132a397d90d95b1424a9a7e3e0fce',
             token0: 'weth',
             token1: 'crv',
             // abi: JSON.parse(readFileSync(`./contracts/.json`))
         },
+        SushiswapWBtcWeth: {
+            address: '0xceff51756c56ceffca006cd410b03ffc46dd3a58',
+            token0: 'wbtc',
+            token1: 'weth',
+            // abi: JSON.parse(readFileSync(`./contracts/.json`))
+        },
+        UniswapWBtcWeth: {
+            address: '0xBb2b8038a1640196FbE3e38816F3e67Cba72D940',
+            token0: 'wbtc',
+            token1: 'weth',
+            // abi: JSON.parse(readFileSync(`./contracts/.json`))
+        }, 
     },
     arbitrum: {
-        SushiswapEthSpell: {
+        SushiswapWethSpell: {
             address: '0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8',
             token0:'weth',
             token1:'spell',
             // abi: JSON.parse(readFileSync(`./contracts/ArbitrumSushiswapEthToSpell.json`))
         },
-        WethBadger: {
+        UniswapWethBadger: {
             address: '0x3C6bd88cdD2AECf466E22d4ED86dB6B8953FDb72',
             token0: 'weth',
             token1: 'badger',
+            // abi: JSON.parse(readFileSync(`./contracts/.json`))
+        },
+        UniswapWethCrv: {
+            address: '0xd45c3A746A22016B2ac77210bDC1cbdE2b1AEee6',
+            token0: 'weth',
+            token1: 'crv',
             // abi: JSON.parse(readFileSync(`./contracts/.json`))
         },
     },
